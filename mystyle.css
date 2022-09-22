@@ -54,8 +54,6 @@ a{
     margin-right: 20px;
     padding: 12px;
     display: inline-block;
-
-    /* "to left" / "to right" - affects initial color */
     background: linear-gradient(to left, black 50%, #ffcc00 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
@@ -89,19 +87,14 @@ header p{
 
 }
 p span.subscribe-word{
-    background: black;
     color: white;
-    text-decoration: underline;
-    text-decoration-color: #ffcc00;
-    text-decoration-thickness: 2px;
-    background-color: black;
-    position: relative;
-}
-span.subscribe-word{
-    transition: all 0.4s linear;
+    border-bottom: 2px solid #ffcc00;
+    background-size: 100% 200%;
+    background-image:linear-gradient(to bottom, black 50%, var(--primary) 50%);
+    transition: background-position .1s ease-in-out, color .1s ease-in-out;
 }
 span.subscribe-word:hover{
-    background-color: var(--primary);
+    background-position: 0 100%;
     color: black;
 }
 div.border{
@@ -112,4 +105,68 @@ div.border{
     margin-right: 47%;
     margin-left: 47%;
 }
-
+/*main news section*/
+.main-news{
+    position: relative;
+    margin-bottom: 20px;
+}
+.main-news-text{
+    position: absolute;
+    top: 290px;
+    left: 20px;
+}
+.main-news-text h3{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10PX;
+}
+.main-news-text p{
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.main-news-text h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+.main-news img{
+    min-width: 100%;
+}
+/*secondary news section*/
+.secondary-news{
+    margin-bottom: 20px;
+}
+.secondary-news h3{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgb(71, 69, 69);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.secondary-news p{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+.secondary-news h4{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.secondary-news img{
+    min-width: 100%;
+    margin-top: 10px;
+}
+.secondary-news-text{
+    background-color: white;
+    color: black;
+    margin-top: -10px;
+    padding: 20px;
+}
